@@ -67,7 +67,8 @@ TrackAVoiceAMusic = #(define-music-function (inTab) (boolean?)
    \time 4/4
    \oneVoice
    %{ 1 %}
-   <d'\2 \RH #3 b,\5 \RH #1 >8-\tag #'chords ^\markup  \fret-diagram-terse "x;2-1-(;4-3;4-4;3-2;2-1-);" 
+   <d'\2 \RH #3 b,\5 \RH #1 >8-\tag #'chords ^\markup  
+   \fret-diagram-terse "x;2-1-(;4-3;4-4;3-2;2-1-);" 
    <b\3   \RH #2 >8 
    <fis\4 \RH #1 >8  
    <b\3   \RH #2 >8 
@@ -87,7 +88,7 @@ TrackAVoiceAMusic = #(define-music-function (inTab) (boolean?)
    %{ 2.5 %}
    <e'\1  \RH #3 >8-\tag #'chords ^\markup 
    % \fret-diagram "1-x;2-2;3-x;4-4;5-x;6-x;"
-   \fret-diagram-terse "x;x;4-3;4-4;2-1;o;" 
+   \fret-diagram-terse "x;x;4-3;x ;2-1;o;" 
    <cis'\2 \RH #2 >8 
    <fis\4  \RH #1 >8 
    <cis'\2 \RH #2 >8 
@@ -107,9 +108,44 @@ TrackAVoiceAMusic = #(define-music-function (inTab) (boolean?)
    <b\3 \RH #2 >8
    
    %{ 4 %}
-   <cis'\2>8-\tag #'chords ^\markup \fret-diagram "1-o;2-2;3-3;4-4;5-x;6-x;" <ais\3>8 <fis\4>8 <ais\3>8 <cis'\2>8 <ais\3>8 <d'\2>8-\tag #'chords ^\markup \fret-diagram "1-x;2-3;3-4;4-4;5-x;6-x;" <b\3>8 
-   <fis\4>8 <b\3>8 <d'\2>8 <b\3>8 <e'\1>8 <b\2>8 <g\3>8 <b\2>8 
-   <f'\1>8 <b\2>8 <fis'\1>8 <cis'\2>8 <ais\3>8 <cis'\2>8 <fis\4>8 <ais\3>8 
+   <cis'\2>8-\tag #'chords ^\markup 
+   % \fret-diagram "1-o;2-2;3-3;4-4;5-x;6-x;" 
+   \fret-diagram-terse "x;x;4-3;3-2;2-1;o;"  
+   <ais\3>8 
+   <fis\4>8 
+   <ais\3>8 
+
+   <cis'\2>8 
+   <ais\3>8 
+   <d'\2>8-\tag #'chords ^\markup 
+   %\fret-diagram "1-x;2-3;3-4;4-4;5-x;6-x;" 
+   \fret-diagram-terse "x;x;4-3;4-4;3-2;o;"  
+   <b\3>8 
+      
+   %{ 5 %}
+   <fis\4>8 
+   <b\3>8 
+   <d'\2>8 
+   <b\3>8 
+
+   <e'\1>8 
+   <b\2>8 
+   <g\3>8 
+   <b\2>8
+
+   %{ 6 %}
+   <f'\1>8 -\tag #'chords ^\markup  
+   \fret-diagram-terse "x;x;x;x;o;1-1;" 
+   <b\2>8 
+   <fis'\1>8 -\tag #'chords ^\markup  
+   \fret-diagram-terse "x;x;4-4;3-3;2-2;2-1;" 
+   <cis'\2>8 
+
+   <ais\3>8 
+   <cis'\2>8 
+   <fis\4>8 
+   <ais\3>8 
+
    \bar "|."
    \pageBreak
 #})
@@ -134,9 +170,9 @@ TrackAStaffGroup = \new StaffGroup <<
    \chords { 
      \set chordChanges = ##t        % only display when chord change
    % 1
-   b1:m | b2:m fis2:7 | fis4:7  b2:m b4:m
+   b1:m | b2:m fis2:7 | fis4:7  b2:m b4:m |
    % 4
-   | eis2 eis4 b4:m |  b2:m
+   eis2 eis4 b4:m |  b2:m r2 | eis4  fis4:7  fis2:7
    }
 
 
