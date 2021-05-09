@@ -63,8 +63,8 @@ TrackAVoiceAMusic = #(define-music-function (inTab) (boolean?)
 #{
    \tempo 4=93
    \clef #(if inTab "moderntab" "treble_8")
-   \key c \major
-   \time 4/4
+   \key b \minor
+   % \time 4/4
    \oneVoice
    %{ 1 %}
    <d'\2 \RH #3 b,\5 \RH #1 >8-\tag #'chords ^\markup  
@@ -88,7 +88,7 @@ TrackAVoiceAMusic = #(define-music-function (inTab) (boolean?)
    %{ 2.5 %}
    <e'\1  \RH #3 >8-\tag #'chords ^\markup 
    % \fret-diagram "1-x;2-2;3-x;4-4;5-x;6-x;"
-   \fret-diagram-terse "x;x;4-3;x ;2-1;o;" 
+   \fret-diagram-terse "x;x;4-3;x;2-1;o;" 
    <cis'\2 \RH #2 >8 
    <fis\4  \RH #1 >8 
    <cis'\2 \RH #2 >8 
@@ -146,6 +146,81 @@ TrackAVoiceAMusic = #(define-music-function (inTab) (boolean?)
    <fis\4>8 
    <ais\3>8 
 
+
+   %{ next %}
+   \break
+   %{ 7 there is a silence here r4 r8 %}
+
+   <d'\2 b,\5 >8-\tag #'chords ^\markup  
+   \fret-diagram-terse "x;2-1-(;4-3;4-4;3-2;2-1-);" 
+   <b\3>8 
+   <fis\4>8 
+   <b\3>8 
+
+   <d'\2>8 
+   <b\3>8 
+   <fis'\1>8 
+   <d'\2>8 
+   
+   %{ 8 %}
+   <fis\4>8 
+   <d'\2>8 
+   <fis'\1>8 
+   <d'\2>8 
+   
+   <e'\1>8 -\tag #'chords ^\markup 
+   \fret-diagram-terse "x;x;4-3;4-4;3-2;o;"  
+   <cis'\2>8
+   <fis\4>8 
+   <cis'\2>8 
+
+   %{ 9 %}
+   <e'\1>8 
+   <cis'\2>8
+   <d'\2>8  -\tag #'chords ^\markup 
+   \fret-diagram-terse "x;x;5-4;4-3;3-2;o;"  
+   <b\3>8 
+
+
+   <g\4>8 
+   <b\3>8 
+   <d'\2>8 
+   <b\3>8 
+
+   %{ 10 %}
+   <e'\1>8 
+   <cis'\2>8 
+   <g\3>8 
+   <cis'\2>8 
+   <e'\1 e\4 >8 
+   
+   <cis'\2>8 
+   <d'\2>8
+   <b\3>8 
+   <fis\4>8 
+   
+   %{ 11 %}
+   <b\3>8 
+   <d'\2>8 
+   <b\3>8 
+   <cis'\2>8 
+   
+   <ais\3>8 
+   <fis\4>8 
+   <ais\3>8 
+   <cis'\2>8 
+   
+   %{ 12 %} 
+   <ais\3>8 
+   <b\3>8 
+   <d'\2>8 
+   <fis\4>8 
+
+   <b\3>8 
+   <e\4>8 
+   r8
+
+
    \bar "|."
    \pageBreak
 #})
@@ -173,6 +248,10 @@ TrackAStaffGroup = \new StaffGroup <<
    b1:m | b2:m fis2:7 | fis4:7  b2:m b4:m |
    % 4
    eis2 eis4 b4:m |  b2:m r2 | eis4  fis4:7  fis2:7
+   
+   %7 r4 r8
+   b1:m | b2:m fis2:7 | fis4:7  b2:m b4:m |
+   
    }
 
 
